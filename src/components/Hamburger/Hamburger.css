@@ -1,0 +1,57 @@
+	.hamburger {
+		width: 28px;
+		height: 28px;
+		background-color: #333;
+		margin-left: 20px;
+		border-radius: 50%;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		padding: 9px;
+		position: absolute;
+		right: 134px;
+		top: 35px;
+		cursor: pointer;
+		display: none;
+		z-index: 1000;
+	}
+
+	.line, .clicked {
+		width: 14px;
+		height: 2px;
+		background: #fff;
+		transition: all .7s;
+	}
+
+	.hamburger::after {
+		display: block;
+		content: 'Favourite';
+		position: absolute;
+		left: 30px;
+		font-size: 20px;
+		color: #ABABAB;
+		margin-left: 5px;
+	}
+
+	.clicked:first-child {
+		transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 1.5);
+		width: 15px;
+	}
+
+	.clicked:last-child {
+		transform: matrix(0.71, -0.71, 0.71, 0.71, 0, -3);
+		width: 15px;
+	}
+
+	@media(max-width: 834px) {
+		.hamburger {
+			display: flex;
+		}
+	}
+
+	@media(max-width: 480px) {
+		.hamburger {
+			top: 15px;
+			right: 114px;
+		}
+	}
