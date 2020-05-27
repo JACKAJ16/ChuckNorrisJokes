@@ -5,7 +5,7 @@ const Hamburger = ({handleHamburger, isHamburgerClicked}) => (
  		<div className="hamburger" onClick={handleHamburger} >
 			<div className={isHamburgerClicked}></div>
 			<div className={isHamburgerClicked}></div>
-	   	</div>
-	   )	  
+	  </div>
+	)	  
 
 export default Hamburger;
